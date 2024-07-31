@@ -6,8 +6,9 @@ const Form = ({ createTodo }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(value);
-        var blank_pattern = /^\s+|\s+$/g;
-        value.replace(blank_pattern, '' ) == "" ? alert('할 일을 입력해주세요!') : createTodo(value);
+        // var blank_pattern = /^\s+|\s+$/g;
+        // value.replace(blank_pattern, '' ) == "" ? alert('할 일을 입력해주세요!') : createTodo(value);
+        !value.trim() === true ? alert('할 일을 입력해주세요!') : createTodo(value);
         setValue('');
     }
 
